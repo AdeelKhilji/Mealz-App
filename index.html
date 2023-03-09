@@ -1,0 +1,162 @@
+<!-- 
+	STUDENT NAME: MOHAMMAD ADEEL KHILJI
+	ASSIGNMENT: 2
+	COURSE: MOBILE WEB-BASED APP DEVELOPMENT
+	COURSE CODE: SYST24444
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meal Tracker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/themes/Dishes.min.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<!--MAIN PAGE-->
+	<div data-role="page" id="mainPage">
+		<!-- HEADER -->
+		<div data-role ="header">
+			<h5>Meal Tracker</h5>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" data-transition="slideUp">LIST OF MEALS</a></li>
+					<li><a href="#addDish" data-transition="slideUp">ADD A DISH</a></li>
+				</ul>
+			</div>
+		</div><!-- END HEADER -->
+	
+	<!-- MAIN CONTENT -->
+	<div data-role="main" class="ui-content">
+		<label for="dishes"><b>LIST OF MEALS</b></label>
+		<br>
+		<ul id="dishes" data-role="listview"></ul>
+		<br><br>
+		<button class="ui-btn" onclick="deleteAll()">DELETE ALL</button>
+	</div>
+	<!-- FOOTER -->
+	<div data-role="footer" data-position="fixed">
+		<p>by adeel</p>
+	</div>
+</div>
+
+<!--ADD DISH PAGE-->
+<div data-role="page" id="addDish">
+	<!-- HEADER -->
+	<div data-role ="header">
+		
+		<h5>Meal Tracker</h5>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#mainPage" data-transition="slideUp">LIST OF MEALS</a></li>
+				<li><a href="#addDish" data-transition="slideUp">ADD A DISH</a></li>
+			</ul>
+		</div>
+	</div><!-- END HEADER -->
+
+	<!-- MAIN CONTENT -->
+	<div data-role="main" class="ui-content">
+		<label style="text-align: center;"> ADD A DISH </label>
+		<hr>
+		<form id="addDishForm">
+			<!-- DISH NAME -->
+			<br>
+			<label for="dishName">NAME</label>
+			<input type="text" id="dishName">
+			<!-- CHECK BOX FOR INGREDIENTS -->
+			<br>
+			<label>MEAL TYPE</label>
+
+				<label for="desert">Desert</label>
+				<input type="radio" name="dishType" id="desert" value="Desert" checked>
+				<label for="savoury">Savoury</label>
+				<input type="radio" name="dishType" id="savoury" value="Savoury">
+			<!-- INGREDIENTS -->
+			<label>INGREDIENTS</label>
+			
+			<label for="ingredientOne">CHICKEN</label>
+			<input name="ing" type="checkbox" id="ingredientOne" value="Chicken">
+			<label for="ingredientTwo">YOGURT</label>
+			<input name="ing" type="checkbox" id="ingredientTwo" value="Yogurt">
+			<label for="ingredientThree">SALT</label>
+			<input name="ing" type="checkbox" id="ingredientThree" value="Salt">
+			<label for="ingredientFour">PEPPER</label>
+			<input name="ing" type="checkbox" id="ingredientFour" value="Pepper">
+			<label for="ingredientFive">SUGAR</label>
+			<input name="ing" type="checkbox" id="ingredientFive" value="Sugar">
+			<label for="ingredientSix">GINGER AND GARLIC PASTE</label>
+			<input name="ing" type="checkbox" id="ingredientSix" value="Ginger And Garlic paste">
+			<label for="ingredientSeven">SHAN MASALA</label>
+			<input name="ing" type="checkbox" id="ingredientSeven" value="Shan Masala">
+			
+			<br>
+			<!-- CALORIES -->
+			<label for="cal">CALORIES</label>
+			<input type="text" id="cal">
+			<br>
+			<!-- DESCRIPTION -->
+			<label for="description">DESCRIPTION</label>
+			<textarea id="description"></textarea>
+			<br>
+			<!-- SUBMIT BUTTON -->
+			<input type="submit" value="Add Dish" id="addDish">
+		</form>
+	</div>
+
+	<!-- FOOTER -->
+	<div data-role="footer">
+		<p>by Adeel K</p>
+	</div>
+</div>
+
+<!-- DISH DETAILS PAGE-->
+
+<div data-role="page" id="dish">
+	<!-- HEADER -->
+	<!-- HEADER -->
+	<div data-role ="header">
+		<div data-role="content">
+				<div data-role="collapsible">
+					
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						
+					</div>
+					<div class="ui-block-b">
+						
+					</div>
+					<div class="ui-block-c" style="text-align: right;">
+						<h6><image src="css/images/myImgPng.png" style="height: 70px; width: 50px; border-radius: 10px;"></h6>
+					</div>
+				</div>
+		</div>
+	</div>
+	<h5>Meal Tracker</h5>
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#mainPage" data-transition="slideUp">LIST OF MEALS</a></li>
+			<li><a href="#addDish" data-transition="slideUp">ADD A DISH</a></li>
+		</ul>
+	</div>
+</div><!-- END HEADER -->
+
+<!-- MAIN CONTENT -->
+<div data-role="main" class="ui-content">
+	<div id="dishDetails"></div>
+	
+	<a href="#mainPage" CLASS="ui-btn">BACK</a>
+	
+</div>
+<!-- FOOTER -->
+<div data-role="footer">
+	<p>by Adeel K</p>
+</div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
